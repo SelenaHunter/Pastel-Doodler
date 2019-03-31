@@ -5,6 +5,8 @@ canvas.height = 400;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 3;
+ctx.fillStyle = "#FFF";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 let isDrawing = false;
 let lastX = 0;
@@ -13,6 +15,7 @@ let hue = 0;
 let sat = '100%';
 let lum = '80%';
 let direction = true;
+
 
 function draw(e) {
 	if (!isDrawing) return; // stop the fn from running when they are not moused down
@@ -38,6 +41,11 @@ function draw(e) {
 }
 
 canvas.addEventListener('mousedown', (e) => {
+	isDrawing = true;
+			[lastX, lastY] = [e.offsetX, e.offsetY];
+});
+
+canvas.addEventListener('touchstart', (e) => {
 	isDrawing = true;
 			[lastX, lastY] = [e.offsetX, e.offsetY];
 });
@@ -111,5 +119,9 @@ function changeColor(choice) {
 		hue = 0;
 		sat = '0%';
 		lum = '60%';
+	} else if (selection == 'white') {
+		hue = 0;
+		sat = '0%';
+		lum = '100%';
 	}
 }
