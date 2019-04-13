@@ -69,10 +69,10 @@ input[type="radio"] {
 		display: inline-flex;
 	}
 	
-	
 	.btn {
 		margin: 4px;
-		padding: 2px 8px;
-		font-size: 24px;
+		padding: 2px;
+		font-size: 20px;
+		-webkit-appearance: none;
 	}
 }
