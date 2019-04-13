@@ -1,7 +1,7 @@
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
-canvas.width = 600;
-canvas.height = 400;
+canvas.width = window.innerWidth * 0.8;
+canvas.height = window.innerHeight * 0.8;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 3;
@@ -132,7 +132,9 @@ document.body.addEventListener("touchstart", function (e) {
 		clientY: touch.clientY
 	});
 	canvas.dispatchEvent(mouseEvent);
-}, {passive: false});
+}, {
+	passive: false
+});
 
 document.body.addEventListener("touchend", function (e) {
 	if (e.target == canvas) {
@@ -140,7 +142,9 @@ document.body.addEventListener("touchend", function (e) {
 	}
 	var mouseEvent = new MouseEvent("mouseup", {});
 	canvas.dispatchEvent(mouseEvent);
-}, {passive: false});
+}, {
+	passive: false
+});
 
 document.body.addEventListener("touchmove", function (e) {
 	if (e.target == canvas) {
@@ -152,7 +156,9 @@ document.body.addEventListener("touchmove", function (e) {
 		clientY: touch.clientY
 	});
 	canvas.dispatchEvent(mouseEvent);
-}, {passive: false});
+}, {
+	passive: false
+});
 
 function getTouchPos(canvasDom, touchEvent) {
 	var rect = canvasDom.getBoundingClientRect();

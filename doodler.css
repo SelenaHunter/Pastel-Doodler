@@ -4,6 +4,7 @@
 }
 
 body {
+	justify-content: center;
 	text-align: center;
 }
 
@@ -38,10 +39,6 @@ h1 {
 	display: none;
 }
 
-#colorSelectMenu {
-	max-height: 50px;
-}
-
 #colorSelectMenu ul {
 	display: flex;
 	flex-direction: column;
@@ -61,7 +58,9 @@ input[type="radio"] {
 	margin: 0 10px 0 10px;
 }
 
-/*
 
 @media only screen and (max-width: 768px) {
-*/
+	body {
+		justify-content: center;
+	}
+}
