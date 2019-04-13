@@ -61,15 +61,18 @@ input[type="radio"] {
 
 @media only screen and (max-width: 768px) {
 	body {
-		justify-content: center;
+		display: inline-block;
 	}
 
 	#colorSelectMenu ul {
-		width: 100%;
+		min-width: 100%;
+		display: inline-flex;
 	}
+	
 	
 	.btn {
 		margin: 4px;
 		padding: 2px 8px;
+		font-size: 24px;
 	}
 }
