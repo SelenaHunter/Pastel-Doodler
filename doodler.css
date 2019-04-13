@@ -60,3 +60,14 @@ h1 {
 input[type="radio"] {
 	margin: 0 10px 0 10px;
 }
+
+
+@media only screen and (max-width: 768px) {
+	#draw {
+		touch-action: inherit;
+	}
+
+	body {
+		touch-action: none;
+	}
+}
