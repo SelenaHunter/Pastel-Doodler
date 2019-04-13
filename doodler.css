@@ -64,18 +64,5 @@ input[type=button]{
 }
 
 @media only screen and (max-width: 768px) {
-	body {
-		display: inline-block;
-	}
 
-	#colorSelectMenu ul {
-		min-width: 100%;
-		display: inline-flex;
-	}
-	
-	.btn {
-		margin: 4px;
-		padding: 2px;
-		font-size: 20px;
-	} 
 }
