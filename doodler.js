@@ -121,7 +121,7 @@ function changeColor(choice) {
 }
 
 // Mobile support
-canvas.addEventListener("touchstart", function (e) {
+document.body.addEventListener("touchstart", function (e) {
 	if (e.target == canvas) {
 		e.preventDefault();
 	}
@@ -134,7 +134,7 @@ canvas.addEventListener("touchstart", function (e) {
 	canvas.dispatchEvent(mouseEvent);
 }, {passive: false});
 
-canvas.addEventListener("touchend", function (e) {
+document.body.addEventListener("touchend", function (e) {
 	if (e.target == canvas) {
 		e.preventDefault();
 	}
@@ -142,7 +142,7 @@ canvas.addEventListener("touchend", function (e) {
 	canvas.dispatchEvent(mouseEvent);
 }, {passive: false});
 
-canvas.addEventListener("touchmove", function (e) {
+document.body.addEventListener("touchmove", function (e) {
 	if (e.target == canvas) {
 		e.preventDefault();
 	}
