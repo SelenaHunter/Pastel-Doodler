@@ -65,10 +65,3 @@ input[type="radio"] {
 
 @media only screen and (max-width: 768px) {
 */
-	#draw {
-		touch-action: inherit;
-	}
-
-	body {
-		touch-action: none;
-	}
