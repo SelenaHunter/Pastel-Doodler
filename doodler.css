@@ -63,4 +63,8 @@ input[type="radio"] {
 	body {
 		justify-content: center;
 	}
+
+	#colorSelectMenu ul {
+		max-height: 90px;
+	}
 }

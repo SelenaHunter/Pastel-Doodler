@@ -168,7 +168,6 @@ function getTouchPos(canvasDom, touchEvent) {
 	};
 }
 
-/*
 document.body.addEventListener("touchstart", function (e) {
 	if (e.target == "canvas") {
 		e.preventDefault();
@@ -184,4 +183,3 @@ document.body.addEventListener("touchmove", function (e) {
 		e.preventDefault();
 	}
 }, false);
-*/
