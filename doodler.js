@@ -123,32 +123,37 @@ function changeColor(choice) {
 
 // Mobile support
 canvas.addEventListener("touchstart", function (e) {
+	if (e.target == "canvas") {
+		e.preventDefault();
+	}
 	mousePos = getTouchPos(canvas, e);
 	var touch = e.touches[0];
 	var mouseEvent = new MouseEvent("mousedown", {
 		clientX: touch.clientX,
 		clientY: touch.clientY
 	});
+	canvas.dispatchEvent(mouseEvent);
+}, {passive: false});
+
+canvas.addEventListener("touchend", function (e) {
 	if (e.target == "canvas") {
 		e.preventDefault();
 	}
-	canvas.dispatchEvent(mouseEvent);
-}, false);
-canvas.addEventListener("touchend", function (e) {
 	var mouseEvent = new MouseEvent("mouseup", {});
 	canvas.dispatchEvent(mouseEvent);
+}, {passive: false});
+
+canvas.addEventListener("touchmove", function (e) {
 	if (e.target == "canvas") {
 		e.preventDefault();
 	}
-}, false);
-canvas.addEventListener("touchmove", function (e) {
 	var touch = e.touches[0];
 	var mouseEvent = new MouseEvent("mousemove", {
 		clientX: touch.clientX,
 		clientY: touch.clientY
 	});
 	canvas.dispatchEvent(mouseEvent);
-}, false);
+}, {passive: false});
 
 function getTouchPos(canvasDom, touchEvent) {
 	var rect = canvasDom.getBoundingClientRect();
