@@ -59,6 +59,10 @@ input[type="radio"] {
 	margin: 0 5px 0 10px;
 }
 
+input[type=button]{
+  -webkit-appearance: button;
+}
+
 @media only screen and (max-width: 768px) {
 	body {
 		display: inline-block;
@@ -73,6 +77,5 @@ input[type="radio"] {
 		margin: 4px;
 		padding: 2px;
 		font-size: 20px;
-		-webkit-appearance: none;
-	}
+	} 
 }
