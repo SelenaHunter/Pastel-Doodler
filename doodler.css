@@ -4,7 +4,6 @@
 }
 
 body {
-	justify-content: center;
 	text-align: center;
 }
 
@@ -39,24 +38,26 @@ h1 {
 	display: none;
 }
 
+#menu {
+}
+
 #colorSelectMenu ul {
 	height: 85px;
 	width: 40%;
-	display: flex;
-	flex-flow: wrap;
-	align-content: center;
+	display: inline-flex;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 
 #colorSelectMenu li {
 	font-size: 14px;
 	font-family: monospace;
-	padding: 0px 10px;
+	padding: 10px;
 	list-style: none;
 }
 
 input[type="radio"] {
-	margin: 0 5px 0 10px;
+	margin: 0 5px;
 }
 
 input[type=button]{
