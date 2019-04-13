@@ -120,10 +120,9 @@ function changeColor(choice) {
 	}
 }
 
-
 // Mobile support
 canvas.addEventListener("touchstart", function (e) {
-	if (e.target == "canvas") {
+	if (e.target == canvas) {
 		e.preventDefault();
 	}
 	mousePos = getTouchPos(canvas, e);
@@ -136,7 +135,7 @@ canvas.addEventListener("touchstart", function (e) {
 }, {passive: false});
 
 canvas.addEventListener("touchend", function (e) {
-	if (e.target == "canvas") {
+	if (e.target == canvas) {
 		e.preventDefault();
 	}
 	var mouseEvent = new MouseEvent("mouseup", {});
@@ -144,7 +143,7 @@ canvas.addEventListener("touchend", function (e) {
 }, {passive: false});
 
 canvas.addEventListener("touchmove", function (e) {
-	if (e.target == "canvas") {
+	if (e.target == canvas) {
 		e.preventDefault();
 	}
 	var touch = e.touches[0];
