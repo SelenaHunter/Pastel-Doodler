@@ -67,6 +67,7 @@ function saveCanvas() {
 }
 document.getElementById("color").addEventListener("click", colorSelect);
 
+// DISPLAY COLOR MENU
 function colorSelect() {
 	if (colorSelectMenu.style.display === "block") {
 		colorSelectMenu.style.display = "none";
@@ -120,7 +121,7 @@ function changeColor(choice) {
 	}
 }
 
-// Mobile support
+// MOBILE SUPPORT
 document.body.addEventListener("touchstart", function (e) {
 	if (e.target == canvas) {
 		e.preventDefault();
